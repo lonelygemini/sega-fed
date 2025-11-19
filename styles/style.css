@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/**************/
+/* CSS REMEDY */
+/**************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+  --font-base: "Inter", system-ui, sans-serif;
+  
+  --color-bg: #0b0e19;
+  --color-text: #ffffff;
+  --color-accent: #1e5cff;
+  --color-accent-light: #6bd4ff;
+
+  --color-button-secondary-bg: rgba(255,255,255,0.2);
+  --color-button-secondary-border: rgba(255,255,255,0.4);
+}
+
+/****************/
+/* JOUW STYLING */
+/****************/
+
+/* jouw code */
+
+body {
+  font-family: var(--font-base);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background: rgba(0,0,0,0.6);
+  position: relative;
+  z-index: 10;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.main-nav a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn.register {
+  background: var(--color-accent);
+  padding: 10px 16px;
+  border-radius: 6px;
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+.hero {
+  position: relative;
+  min-height: 900px;
+  display: flex;
+  align-items: center;
+  padding: 32px;
+}
+
+.hero-content {
+  max-width: 600px;
+  z-index: 2;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  color: var(--color-accent-light);
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--color-text);
+}
+
+.btn.primary {
+  background: var(--color-accent);
+}
+
+.btn.secondary {
+  background: var(--color-button-secondary-bg);
+  border: 1px solid var(--color-button-secondary-border);
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../images/sonicrumble.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(0.65);
+  z-index: 1;
+}
+
+.worlds {
+  background-color: #003078;
+  padding: 64px 32px 48px 32px;
+}
+
+.worlds-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto 24px auto;
+}
+
+/* de webkit-text-stroke is iets dat ik zocht voor de font, maar ik had
+dit website gevonden met een korte code die dit fixt
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/-webkit-text-stroke-color */
+.worlds-title {
+  font-size: 96px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  color: transparent;
+  -webkit-text-stroke: 2px #0054c2;
+}
+
+.worlds-link {
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.worlds-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  gap: 16px;
+}
+
+.world-card {
+  position: relative;
+  flex: 1;
+  min-height: 580px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 24px;
+  text-decoration: none;
+  color: var(--color-text);
+  border-radius: 8px;
+}
+
+.world-card-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.75);
+  min-height: 580px;
+}
+
+.world-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 40%;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 100%);
+  z-index: 0;
+}
+
+.world-card-title {
+  position: relative;
+  z-index: 1;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+
+.world-card:hover img {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+
+
+@media (max-width: 800px) {
+  .main-nav ul {
+    display: none;
+  }
+
+  .hero {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .worlds {
+    padding: 40px 16px 32px 16px;
+  }
+
+  .worlds-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .worlds-title {
+    font-size: 56px;
+  }
+
+  .worlds-grid {
+    flex-direction: column;
+  }
+
+  .world-card {
+    min-height: 360px;
+  }
+}
