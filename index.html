@@ -1,148 +1,721 @@
 <!DOCTYPE html>
-<html lang="nl">
-	
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="author" content="jouw naam">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
- <title>SEGA Prototype</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="julia-wang">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SEGA Prototype</title>
   <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
   <header class="site-header">
-    <div class="logo">
-      <img src="images/sega-logo.svg" alt="SEGA logo">
-    </div>
+  <a href="/" class="brand">
+    <img src="images/sega-logo.svg" alt="SEGA">
+  </a>
 
-    <nav class="main-nav" aria-label="Primary">
-      <ul>
-        <li><a href="#">WORLDS</a></li>
-        <li><a href="#">GAMES</a></li>
-        <li><a href="#">REWARDS</a></li>
-        <li><a href="#">WATCH</a></li>
-        <li><a href="#">MERCH</a></li>
-        <li><a href="#">NEWS</a></li>
-        <li><a href="#">DEALS</a></li>
-      </ul>
-    </nav>
+  <button
+    class="menu-outlook"
+    type="button"
+    aria-expanded="false"
+    aria-controls="mobile-menu"
+  >
+    <span class="sr-only">Open hoofdmenu</span>
+    <span aria-hidden="true" class="menu-icon">☰</span>
+  </button>
+</header>
 
-    <div class="header-actions">
-      <a class="btn register" href="#">Registreren</a>
-    </div>
-  </header>
+<nav id="mobile-menu" class="mobile-nav" aria-label="Hoofdmenu">
+  <ul class="mobile-nav-list">
+    <li><a href="#">Worlds</a></li>
+    <li><a href="#">Games</a></li>
+    <li><a href="#">Rewards</a></li>
+    <li><a href="#">Watch</a></li>
+    <li><a href="#">Merch</a></li>
+    <li><a href="#">News</a></li>
+    <li><a href="#">Deals</a></li>
+  </ul>
+</nav>
 
-<section class="hero">
-  <div class="hero-content">
-    <h2 class="subtitle">Sonic Rumble</h2>
-    <h1 class="title">Ready, Set, Rumble!</h1>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <figure class="hero-visual">
+        <img src="images/sonicrumble.jpg" alt="Sonic running">
+      </figure>
 
-    <div class="hero-buttons">
-      <a class="btn primary" href="#">Available Now</a>
-      <a class="btn secondary" href="#">Learn More</a>
-    </div>
-  </div>
+      <header>
+        <p class="hero-kicker">Sonic Rumble</p>
+        <h1 id="hero-title">Ready, Set, Rumble!</h1>
+      </header>
 
-  <div class="hero-bg"></div>
-</section>
+      <nav aria-label="Acties voor Sonic Rumble">
+        <a class="btn btn-primary" href="#">Available now</a>
+        <a class="btn btn-secondary" href="#">Learn more</a>
+      </nav>
+    </section>
 
-<section class="worlds">
-  <div class="worlds-header">
-    <h2 class="worlds-title">OUR WORLDS</h2>
-    <a href="#" class="worlds-link">
-      SEE ALL WORLDS <span aria-hidden="true">↗</span>
-    </a>
-  </div>
+    <section class="worlds" aria-labelledby="worlds-title">
+      <h2 id="worlds-title">Our Worlds</h2>
+      
+      <article class="world-card">
+      <figure class="world-art">
+      <img src="images/sonic-world-vertical-cover.jpg" alt="Sonic the Hedgehog wereld">
+      </figure>
 
-  <div class="worlds-grid">
+      <header class="world-card-header">
+      <p class="world-card-label">Sonic Rumble</p>
+      <h3 class="world-name">Sonic the Hedgehog</h3>
+      </header>
+      </article>
 
-    <a href="#" class="world-card">
-      <img src="images/sonic-world-vertical-cover.jpg" alt="Sonic the Hedgehog world" class="world-card-img">
-      <h3 class="world-card-title">SONIC THE HEDGEHOG</h3>
-    </a>
+      <nav class="worlds-footer" aria-label="Meer werelden bekijken">
+        <a href="#" class="worlds-link">
+          See all worlds
+          <span aria-hidden="true">➜</span>
+        </a>
+      </nav>
+    </section>
 
-    <a href="#" class="world-card">
-      <img src="images/s_lad_world_cover_vt_1280x2276.jpg" alt="Like a Dragon & Yakuza world" class="world-card-img">
-      <h3 class="world-card-title">LIKE A DRAGON &amp; YAKUZA</h3>
-    </a>
-
-    <a href="#" class="world-card">
-      <img src="images/tw-generic-verticalcover.jpg" alt="Total War world" class="world-card-img">
-      <h3 class="world-card-title">TOTAL WAR</h3>
-    </a>
-
-    <a href="#" class="world-card">
-      <img src="images/persona_world_verticalcoverimage.jpg" alt="Persona world" class="world-card-img">
-      <h3 class="world-card-title">PERSONA</h3>
-    </a>
-</section>
-
-    <section class="releases">
-  <div class="releases-header">
-    <h2 class="releases-title">NEW GAME RELEASES</h2>
+<section class="releases" aria-labelledby="releases-title">
+  <header class="releases-header">
+    <h2 id="releases-title" class="releases-title">NEW GAME RELEASES</h2>
     <a href="#" class="releases-link">
       SEE ALL GAMES <span aria-hidden="true">↗</span>
     </a>
-  </div>
+  </header>
 
-  <div class="releases-grid">
+  <ul class="releases-list">
+    <li>
+      <a href="#" class="release-card">
+        <img
+          src="images/sonicracingcrossworlds_vertical_cover.jpg"
+          alt="Sonic Racing: CrossWorlds cover"
+          class="release-image"
+        >
 
-    <a href="#" class="release-card">
-      <img src="images/sonicracingcrossworlds_vertical_cover.jpg" alt="Sonic Racing: CrossWorlds cover" class="release-image">
-      <div class="release-content">
-        <div class="release-tags">
-          <span class="tag">ACTION + ADVENTURE</span>
-          <span class="tag">KART RACER</span>
-        </div>
-        <h3 class="release-title">Sonic Racing: CrossWorlds</h3>
-        <p class="release-text">
-          Come race on Our Level! Race across land, sea, air and space in Sonic Racing: CrossWorlds!
+        <header class="release-content">
+          <p class="release-tags">
+            <span class="tag">ACTION + ADVENTURE</span>
+            <span class="tag">KART RACER</span>
+          </p>
+          <h3 class="release-title">Sonic Racing: CrossWorlds</h3>
+
+          <p class="release-text">
+          Come race on our Level! Race across land, sea, air and space in Sonic Racing: CrossWorlds!
         </p>
-      </div>
-    </a>
+        </header>
 
-    <a href="#" class="release-card">
-      <img src="images/s_fm26_m_ka_cover_v_1080x1920.jpg" alt="Football Manager 26 cover" class="release-image">
-      <div class="release-content">
-        <div class="release-tags">
-          <span class="tag">SIMULATION</span>
-          <span class="tag">SPORTS</span>
-        </div>
-        <h3 class="release-title">Football Manager 26</h3>
-        <p class="release-text">
-          Step into the dugout and experience the future of football management.
-        </p>
-      </div>
-    </a>
-
-    <a href="#" class="release-card">
-      <img src="images/s_rumble_m_ka_vt_prod.jpg" alt="Sonic Rumble cover" class="release-image">
-      <div class="release-content">
-        <div class="release-tags">
-          <span class="tag">MOBILE</span>
-          <span class="tag">ONLINE MULTIPLAYER</span>
-        </div>
-        <h3 class="release-title">Sonic Rumble</h3>
-        <p class="release-text">
-          Join Sonic and friends in Sonic Rumble, a chaotic party game where up to 32 players battle for survival!
-        </p>
-      </div>
-    </a>
-
-    <a href="#" class="release-card">
-      <img src="images/s_vf5revows_cover_logo_vt_1280x2276.jpg" alt="Virtua Fighter 5 R.E.V.O. World Stage cover" class="release-image">
-      <div class="release-content">
-        <div class="release-tags">
-          <span class="tag">ACTION</span>
-        </div>
-        <h3 class="release-title">Virtua Fighter 5 R.E.V.O. World Stage</h3>
-        <p class="release-text">
-          Take the gameplay of Virtua Fighter 5 to new levels in World Stage.
-        </p>
-      </div>
-    </a>
-
-  </div>
-
-  </div>
+      </a>
+    </li>
+  </ul>
 </section>
+
+    <section class="games" aria-labelledby="games-title">
+      <h2 id="games-title" class="sr-only">Games</h2>
+
+      <ul class="games-list">
+        <li>
+          <article class="game-card">
+          <figure class="game-card-media">
+            <img src="images/s_yk3_vertical_cover_1280x2276.jpg"
+                   alt="Yakuza Kiwami 3 &amp; Dark Ties cover">
+              <figcaption class="game-tags">
+                <span class="tag">Action + Adventure</span>
+              </figcaption>
+            </figure>
+            <h3 class="game-title">Yakuza Kiwami 3 &amp; Dark Ties</h3>
+          </article>
+        </li>
+
+        <li>
+          <article class="game-card">
+            <figure class="game-card-media">
+              <img src="images/metaphor_vertical_cover.jpg"
+                   alt="Metaphor: ReFantazio cover">
+              <figcaption class="game-tags">
+                <span class="tag">Turn-based Strategy</span>
+                <span class="tag">RPG</span>
+                <span class="tag">Action</span>
+              </figcaption>
+            </figure>
+            <h3 class="game-title">Metaphor: ReFantazio</h3>
+          </article>
+        </li>
+
+        <li>
+          <article class="game-card">
+            <figure class="game-card-media">
+              <img src="images/persona4revival-vertical_cover_20250612-28fmfgg496.jpg"
+                   alt="Persona 4 Revival cover">
+              <figcaption class="game-tags">
+                <span class="tag">JRPG</span>
+              </figcaption>
+            </figure>
+            <h3 class="game-title">Persona 4 Revival</h3>
+          </article>
+        </li>
+
+        <li>
+          <article class="game-card">
+            <figure class="game-card-media">
+              <img src="images/p5x-vertical_cover.jpg"
+                   alt="Persona 5: The Phantom X cover">
+              <figcaption class="game-tags">
+                <span class="tag">Mobile</span>
+                <span class="tag">JRPG</span>
+              </figcaption>
+            </figure>
+            <h3 class="game-title">Persona 5: The Phantom X</h3>
+          </article>
+        </li>
+
+                <li>
+          <article class="game-card">
+            <figure class="game-card-media">
+              <img src="images/raidou_remastered_tmotsa_vertical_cover.jpg"
+                   alt="RAIDOU Remastered cover">
+              <figcaption class="game-tags">
+                <span class="tag">JRPG</span>
+              </figcaption>
+            </figure>
+            <h3 class="game-title">RAIDOU Remastered: The Mystery of the Soulless Army</h3>
+          </article>
+        </li>
+
+                            <li>
+          <article class="game-card">
+            <figure class="game-card-media">
+              <img src="images/s_fm26_m_ka_cover_v_1080x1920.jpg"
+                   alt="Football Manager cover">
+              <figcaption class="game-tags">
+                <span class="tag">Simulation</span>
+                <span class="tag">Sports</span>
+              </figcaption>
+            </figure>
+            <h3 class="game-title">Football Manager 26</h3>
+          </article>
+        </li>
+
+                                    <li>
+          <article class="game-card">
+            <figure class="game-card-media">
+              <img src="images/sonic-sxsgenerations-vertical-cover.jpg"
+                   alt="Sonic X Shadow Generations cover">
+              <figcaption class="game-tags">
+                <span class="tag">Action + Adventure</span>
+                <span class="tag">Platformer</span>
+                <span class="tag">Kids + Family</span>
+              </figcaption>
+            </figure>
+            <h3 class="game-title">Sonic X Shadow Generations</h3>
+          </article>
+        </li>
+
+        <li>
+          <article class="game-card">
+            <figure class="game-card-media">
+              <img src="images/s_yk2_vt_cover_1280x2276.jpg"
+                   alt="Yakuza Kiwami 2 cover">
+              <figcaption class="game-tags">
+                <span class="tag">Action + Adventure</span>
+              </figcaption>
+            </figure>
+            <h3 class="game-title">Yakuza Kiwami 2</h3>
+          </article>
+        </li>
+
+        <li>
+          <article class="game-card">
+            <figure class="game-card-media">
+              <img src="images/s_vf5revows_cover_logo_vt_1280x2276.jpg"
+                   alt="Virtua Fighter 5 R.E.V.O. World Stage cover">
+              <figcaption class="game-tags">
+                <span class="tag">Action</span>
+              </figcaption>
+            </figure>
+            <h3 class="game-title">Virtua Fighter 5 R.E.V.O. World Stage</h3>
+          </article>
+        </li>
+
+                <li>
+          <article class="game-card">
+            <figure class="game-card-media">
+              <img src="images/two-point-museum-vertical-cover.jpg"
+                   alt="Two Point Musuem cover">
+              <figcaption class="game-tags">
+                <span class="tag">Simulation</span>
+                <span class="tag">Strategy</span>
+              </figcaption>
+            </figure>
+            <h3 class="game-title">Two Point Musuem</h3>
+          </article>
+        </li>
+
+                        <li>
+          <article class="game-card">
+            <figure class="game-card-media">
+              <img src="images/wh40ksm-vertical_cover.jpg"
+                   alt="Warhammer 40,000: Space Marine cover">
+              <figcaption class="game-tags">
+                <span class="tag">Shooter</span>
+                <span class="tag">Action</span>
+                <span class="tag">Sci-Fi</span>
+              </figcaption>
+            </figure>
+            <h3 class="game-title">Warhammer 40,000: Space Marine</h3>
+          </article>
+        </li>
+
+          <li>
+    <a href="#" class="game-card game-card-all">
+      <span class="game-card-all-title">SEE ALL GAMES</span>
+      <span class="game-card-all-arrow" aria-hidden="true">➜</span>
+    </a>
+  </li>
+</ul>
+
+      </ul>
+    </section>
+
+    <section class="latest-news" aria-labelledby="latest-news-title">
+      <h2 id="latest-news-title">THE LATEST NEWS</h2>
+
+      <ul class="latest-news-list">
+        <li>
+          <article class="news-card">
+            <figure class="news-card-media">
+              <img src="images/s_rgg_t_upgrade_0.jpg"
+                   alt="YAKUZA SERIES DEC 8TH RELEASES OFFER DISCOUNT OPTIONS FOR EXISTING OWNERS artwork">
+            </figure>
+
+            <header class="news-card-header">
+              <p class="news-meta-date">November 25, 2025</p>
+              <p class="news-meta-source">SEGA News</p>
+              <h3 class="news-card-title">
+                <a href="#">
+                  YAKUZA SERIES DEC 8TH RELEASES OFFER DISCOUNT OPTIONS FOR EXISTING OWNERS
+                </a>
+              </h3>
+            </header>
+
+            <p class="news-card-text">
+              Yakuza series 20th Anniversary releases of Yakuza Kiwami, Yakuza Kiwami 2, and 
+              Yakuza 0 Director's Cut on PlayStation 5, Xbox Series X|S and Steam will offer upgrade options.
+            </p>
+          </article>
+        </li>
+
+        <li>
+          <article class="news-card">
+            <figure class="news-card-media">
+              <img src="images/s_m_t_tga2025.jpg"
+                   alt="SHINOBI: Art of Vengeance art">
+            </figure>
+
+            <header class="news-card-header">
+              <p class="news-meta-date">November 21, 2025</p>
+              <p class="news-meta-source">SHINOBI: Art of Vengeance</p>
+              <h3 class="news-card-title">
+                <a href="#">
+                 SHINOBI: ART OF VENGEANCE NOMINATED FOR BEST ACTION GAME AT TGA
+                </a>
+              </h3>
+            </header>
+
+            <p class="news-card-text">
+              The year of the ninja continues! SHINOBI: Art of Vengeance 
+              has been nominated for Best Action Game at The Game Awards. 
+            </p>
+          </article>
+        </li>
+
+        <li>
+          <article class="news-card">
+            <figure class="news-card-media">
+              <img src="images/s_t_m_t_launch_1.jpg"
+                   alt="Sonic Racing: CrossWorlds screenshot">
+            </figure>
+
+            <header class="news-card-header">
+              <p class="news-meta-date">November 21, 2025</p>
+              <p class="news-meta-source">Sonic Racing: CrossWorlds</p>
+              <h3 class="news-card-title">
+                <a href="#">
+                  SONIC RACING: CROSSWORLDS - ON SALE FOR THE FIRST TIME
+                  
+                </a>
+              </h3>
+            </header>
+
+            <p class="news-card-text">
+              Sonic Racing: CrossWorlds is on sale for the first time! See which platforms are eligible.
+            </p>
+          </article>
+        </li>
+
+        <li>
+          <article class="news-card">
+            <figure class="news-card-media">
+              <img src="images/s_m_n_lizardcubebundle.jpg"
+                   alt="SHINOBI: Art of Vengeance bundle">
+            </figure>
+
+            <header class="news-card-header">
+              <p class="news-meta-date">November 20, 2025</p>
+              <p class="news-meta-source">SHINOBI: Art of Vengeance</p>
+              <h3 class="news-card-title">
+                <a href="#">
+                  TWO NEW SHINOBI: ART OF VENGEANCE BUNDLES CELEBRATE LIZARDCUBE EXCELLENCE
+                </a>
+              </h3>
+            </header>
+
+            <p class="news-card-text">
+              Play SHINOBI: Art of Vengeance, nominee for Best Action Game at The Game Awards, 
+              with two exclusive bundles that pair the iconic ninja game with a reimagined classic 
+              SEGA brand developed by Lizardcube, known for creating high-quality 2D games. Complete 
+              your collection of...
+            </p>
+          </article>
+        </li>
+
+        <li>
+          <article class="news-card">
+            <figure class="news-card-media">
+              <img src="images/s_t_m_spongebob.jpg"
+                   alt="Sonic Racing: CrossWorlds screenshot">
+            </figure>
+
+            <header class="news-card-header">
+              <p class="news-meta-date">November 19, 2025</p>
+              <p class="news-meta-source">Sonic Racing: CrossWorlds</p>
+              <h3 class="news-card-title">
+                <a href="#">
+                  SPONGEBOB SQUAREPANTS PACK IS AVAILABLE NOW
+                </a>
+              </h3>
+            </header>
+
+            <p class="news-card-text">
+              Plus, the SpongeBob Festival kicks off this weekend!
+            </p>
+          </article>
+        </li>
+
+        <li>
+          <article class="news-card">
+            <figure class="news-card-media">
+              <img src="images/a_pf_m_plive26_hz_3840x2160.jpg"
+                   alt="Sonic Racing: CrossWorlds screenshot">
+            </figure>
+
+            <header class="news-card-header">
+              <p class="news-meta-date">November 7, 2025</p>
+              <p class="news-meta-source">SEGA News</p>
+              <h3 class="news-card-title">
+                <a href="#">
+                  PERSONA LIVE 2026: AWAKENINGS CONCERT DEBUTS AT THE ICONIC DOLBY THEATRE
+                </a>
+              </h3>
+            </header>
+
+            <p class="news-card-text">
+              ATLUS and SEGA are bringing the high energy performances, talent and 
+              fan-favorite songs from the tremendously successful Persona Live Concert to Los Angeles!
+            </p>
+          </article>
+        </li>
+
+      </ul>
+    </section>
+
+    <section class="trailers" aria-labelledby="trailers-title">
+      <h2 id="trailers-title">WATCH THE TRAILERS</h2>
+
+      <ul class="trailers-scroll">
+        <li>
+          <article class="trailer-card">
+            <figure class="trailer-thumb">
+              <img src="images/s_yk3_trailer_thumb_dtcombat_1920x1080.jpg"
+                   alt="Trailer: Yakuza Kiwami 3 &amp; Dark Ties">
+              <button type="button"
+                      class="trailer-play"
+                      aria-label="Play trailer: Yakuza Kiwami 3 &amp; Dark Ties">
+                ▶
+              </button>
+            </figure>
+          </article>
+        </li>
+
+        <li>
+          <article class="trailer-card">
+            <figure class="trailer-thumb">
+              <img src="images/s_t_m_t_minecraft.jpg"
+                   alt="Trailer: Sonic Racing CrossWorlds in Minecraft">
+              <button type="button"
+                      class="trailer-play"
+                      aria-label="Play trailer: Sonic Racing CrossWorlds">
+                ▶
+              </button>
+            </figure>
+          </article>
+        </li>
+
+        <li>
+          <article class="trailer-card">
+            <figure class="trailer-thumb">
+              <img src="images/s_sr_m_ka_hz_3840x2160_logo.jpg"
+                   alt="Trailer: Sonic Rumble">
+              <button type="button"
+                      class="trailer-play"
+                      aria-label="Play trailer: Sonic Rumble">
+                ▶
+              </button>
+            </figure>
+          </article>
+        </li>
+
+                <li>
+          <article class="trailer-card">
+            <figure class="trailer-thumb">
+              <img src="images/s_fm26_t_launch_hz_1920x1080.jpg"
+                   alt="Trailer: Football Manager">
+              <button type="button"
+                      class="trailer-play"
+                      aria-label="Play trailer: Football Manager">
+                ▶
+              </button>
+            </figure>
+          </article>
+        </li>
+
+                        <li>
+          <article class="trailer-card">
+            <figure class="trailer-thumb">
+              <img src="images/a_raidou_remastered_tmotsa_trailer_thumb_demo.jpg"
+                   alt="Trailer: RAIDOU Remastered">
+              <button type="button"
+                      class="trailer-play"
+                      aria-label="Play trailer: RAIDOU Remastered">
+                ▶
+              </button>
+            </figure>
+          </article>
+        </li>
+
+                                <li>
+          <article class="trailer-card">
+            <figure class="trailer-thumb">
+              <img src="images/s_vf5revo_t_launch.jpg"
+                   alt="Trailer: Virtua Fighter 5">
+              <button type="button"
+                      class="trailer-play"
+                      aria-label="Play trailer: Virtua Fighter 5">
+                ▶
+              </button>
+            </figure>
+          </article>
+        </li>
+
+                                <li>
+          <article class="trailer-card">
+            <figure class="trailer-thumb">
+              <img src="images/s_t_m_t_launch.jpg"
+                   alt="Trailer: Sonic Racing CrossWorlds">
+              <button type="button"
+                      class="trailer-play"
+                      aria-label="Play trailer: Sonic Racing CrossWorlds">
+                ▶
+              </button>
+            </figure>
+          </article>
+        </li>
+
+                                <li>
+          <article class="trailer-card">
+            <figure class="trailer-thumb">
+              <img src="images/s_m_m_t_launch.jpg"
+                   alt="Trailer: SHINOBI Art of Vengeance">
+              <button type="button"
+                      class="trailer-play"
+                      aria-label="Play trailer: SHINOBI Art of Vengeance">
+                ▶
+              </button>
+            </figure>
+          </article>
+        </li>
+
+                                <li>
+          <article class="trailer-card">
+            <figure class="trailer-thumb">
+              <img src="images/s_s_trailer_thumb_combat_1920x1080_0.jpg"
+                   alt="Trailer: Virtua Fighter Project">
+              <button type="button"
+                      class="trailer-play"
+                      aria-label="Play trailer: Virtua Fighter Project">
+                ▶
+              </button>
+            </figure>
+          </article>
+        </li>
+
+                                <li>
+          <article class="trailer-card">
+            <figure class="trailer-thumb">
+              <img src="images/s_dshc2_m_pv5_t_hz.jpg"
+                   alt="Trailer: Demon Slayer">
+              <button type="button"
+                      class="trailer-play"
+                      aria-label="Play trailer: Demon Slayer">
+                ▶
+              </button>
+            </figure>
+          </article>
+        </li>
+
+                                <li>
+          <article class="trailer-card">
+            <figure class="trailer-thumb">
+              <img src="images/a_r_ac_t_hz.jpg"
+                   alt="Trailer: RAIDOU Remastered">
+              <button type="button"
+                      class="trailer-play"
+                      aria-label="Play trailer: RAIDOu Remastered">
+                ▶
+              </button>
+            </figure>
+          </article>
+        </li>
+
+                                <li>
+          <article class="trailer-card">
+            <figure class="trailer-thumb">
+              <img src="images/ladpyih_trailer_thumbnail_accolades.jpg"
+                   alt="Trailer: Pirate Yakuza">
+              <button type="button"
+                      class="trailer-play"
+                      aria-label="Play trailer: Pirate Yakuza">
+                ▶
+              </button>
+            </figure>
+          </article>
+        </li>
+
+                                <li>
+          <article class="trailer-card">
+            <figure class="trailer-thumb">
+              <img src="images/two_point_museum-security_feature_focus_trailer.jpg"
+                   alt="Trailer: Two Point Musuem">
+              <button type="button"
+                      class="trailer-play"
+                      aria-label="Play trailer: Two Point Musuem">
+                ▶
+              </button>
+            </figure>
+          </article>
+        </li>
+
+      </ul>
+    </section>
+
+    <section class="newsletter" aria-labelledby="newsletter-title">
+      <h2 id="newsletter-title">ENTER YOUR EMAIL</h2>
+
+      <form class="newsletter-form">
+        <label class="sr-only" for="newsletter-email">Enter your email</label>
+        <input
+          id="newsletter-email"
+          type="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+        >
+        <button type="submit" class="newsletter-button" aria-label="Submit email">
+          →
+        </button>
+      </form>
+
+      <p class="newsletter-text">
+        Sign up to get exclusive content &amp; offers about all your favorite games
+        straight to your inbox!
+      </p>
+      <p class="newsletter-text">
+        Already subscribed? Enter your email to update your preferences.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav class="footer-nav" aria-label="Footer menu">
+      <details class="footer-group">
+        <summary class="footer-summary">About</summary>
+        <ul class="footer-list">
+          <li><a href="#">Studios</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </details>
+
+      <details class="footer-group">
+        <summary class="footer-summary">Support</summary>
+        <ul class="footer-list">
+          <li><a href="#">Game Support</a></li>
+          <li><a href="#">Approved Partners List</a></li>
+        </ul>
+      </details>
+
+      <details class="footer-group">
+        <summary class="footer-summary">Useful Links</summary>
+        <ul class="footer-list">
+          <li><a href="#">Legal and Privacy Information</a></li>
+          <li><a href="#">California Privacy Notice</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+          <li><a href="#">Corporate Governance</a></li>
+          <li><a href="#">Website Terms</a></li>
+        </ul>
+      </details>
+    </nav>
+
+    <section aria-label="SEGA information">
+      <img src="images/sega-logo.svg" alt="SEGA" class="footer-logo">
+
+      <p class="footer-legal">
+        ©SEGA. All Rights Reserved. SEGA and the SEGA logo are registered trademarks of SEGA CORPORATION.
+        All other trademarks, logos and copyrights are property of their respective owners.
+      </p>
+
+      <p class="footer-legal">
+        Sega Europe Limited. Company number 01689657. Registered office: SEGA Europe Limited,
+        Building 12, Chiswick Business Park, 566 Chiswick High Road, London, W4 5AN, United Kingdom.
+      </p>
+
+      <p class="footer-legal">
+        Sega of America, Inc., 140 Progress, Suite 100, Irvine, CA 92618.
+      </p>
+
+      <fieldset class="footer-language">
+        <legend class="footer-language-label">Choose your language</legend>
+        <select name="language">
+          <option>English</option>
+          <option>Deutsch</option>
+          <option>Français</option>
+          <option>Español</option>
+        </select>
+      </fieldset>
+
+      <button type="button" class="footer-privacy-button">
+        Your privacy choices
+      </button>
+
+      <a href="#" class="footer-privacy-link">
+        What is the California Privacy Act?
+      </a>
+
+      <img src="images/pegi-18-white_1.svg" alt="PEGI 18 rating" class="footer-pegi">
+    </section>
+  </footer>
+
+  <script defer src="scripts/script.js"></script>
+  
+</body>
+</html>

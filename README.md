@@ -16,13 +16,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Auteur:
-  Julia Wang
+  Sanne 't Hooft (vervangen door jouw naam)
 
   #### Je startniveau:
-  Rood (denk ik, dit is middelniveau als het goed is.)
+  hier je startniveau (kies uit zwart, rood óf blauw)
 
   #### Je focus:
-  Mijn focus in het begin tot nu toe is de surface plane.
+  hier je focus (kies uit responsive óf surface plane)
  
 </details>
 
@@ -36,15 +36,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  https://www.sega.com/ 
+  link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  Homepage Sega
-  <img src="readme-images/screenshot-home.jpeg" width="375px" alt="de homepagina">
+  hier de naam van de pagina  
+  <img src="readme-images/Screenshot 2025-12-02 125146.png" width="375px" alt="omschrijving van de pagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  Sonic Rumble 
-  <img src="readme-images/screenshot-sonicrumble.jpeg" width="375px" alt="de-pagina-van-de-game-sonic-rumble">
+  hier de naam van de pagina  
+  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
  
 </details>
 
@@ -56,35 +56,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 2<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Screenreader Mobile Chrome:
-  - Het leest alleen de cookies van de website en de informatie ervan, maar niks anders.
-  
-  Narrator Windows:
-  - Leest eerst de cookies, dan de header en gaat dan van links naar recht, van boven naar onder.
-  - Bij elke hyperlink, zegt de narrator [link] bij elk interactieve element
-  - Bij elke graphic zegt het de volle naam van de afbeelding
-  - Graphics die geen label hebben, worden genaamd als [unlabeled].
-
-  WCWCAG‐checklist:
-  - De kleuren zijn goed apart van elkaar zodat het goed leesbaar is.
-  - De site heeft de navigatie menu
-  - De H-tags en paginatitels zijn goed ondertiteld
-  - De afbeelding met tekst overeen hebben een soort donkere filter zodat de tekst overheen meer leesbaar is.
-  - Het is moeilijk te zien of elk afbeelding een alt-tag hebben. Bij de screenreader is het ook zo
-  dat de graphic [unlabeled] is of de origineele volle naam geeft, geen alt.
-  - Alles is klikbaar met de toetsenboord, behalve de hero carousel, die is niet met de toetsenbord interactief.
+  Lijst met je bevindingen die in de test naar voren kwamen:
 
 </details>
-Bij screenreader is er veel links, en het helpt wel. Ook is het bij elk sega pagina dat ze eerst de cookies lezen.
-Dit komt dat de cookies in sega.com een cookiecontrol menu gebruiken waardoor de menu permanent op elk pagina zit
-en waardoor je zelf de cookies kan customizen wanner je wilt.
-
-De vormgeving is wel fijn met de contrast van kleuren met elkaar en de brightness van afbeeldingen zodat de tekst meer leesbaar is.
-Veel dingen kon ik alleen niet inspecteren doordat de er heel veel script-tags zijn bij de sega.com website. De screenreader
-heeft me wel geholpen wat er misschien niet in is bijvoorbeeld alt-tags etc.\
-
-Bijna alles is met de toetsenbord the interacteren, behalve de carousal in de hero section.
-
 
 
 
@@ -94,18 +68,7 @@ Bijna alles is met de toetsenbord the interacteren, behalve de carousal in de he
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/screenshot-home.jpeg" width="375px" alt="breakdown van de hele pagina 1">
-  <img src="readme-images/worlds-section.png" width="375px" alt="breakdown van de hele pagina 2">
-  <img src="readme-images/releases-section.png" width="375px" alt="breakdown van de hele pagina 3">
-  <img src="readme-images/games-section.png" width="375px" alt="breakdown van de hele pagina 4">
-  <img src="readme-images/news-section.png" width="375px" alt="breakdown van de hele pagina 5">
-  <img src="readme-images/footer-section.png" width="375px" alt="breakdown van de hele pagina 6">
-
-  ### dynamisch deel (bijv menu): 
-  <img src="readme-images/burger-menu.png" width="375px" alt="breakdown van een dynamisch deel">
-
-  ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/carousel.png" width="375px" alt="breakdown van nog een dynamisch deel">
+  <img src="readme-images/breakdown.jpg" width="375px" alt="breakdown van de hele pagina">
 
 </details>
 
@@ -260,8 +223,10 @@ Bijna alles is met de toetsenbord the interacteren, behalve de carousal in de he
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/-webkit-text-stroke-color
+  - Voor de special soort tekst van WORLDS in de homepagina.
+  2. https://www.w3schools.com/cssref/func_translatex.php
+  - animatie voor fde hamburgermenu zodat het zorht dat het erin shuift.
+  3.
 
 </details>
