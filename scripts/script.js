@@ -1,5 +1,5 @@
 const menuButton = document.querySelector('.menu-outlook');
-const mobileNav = document.querySelector('#mobile-menu');
+const mobileNav = document.querySelector('nav'); // enige nav in de pagina
 const menuIcon = menuButton.querySelector('.menu-icon');
 
 menuButton.addEventListener('click', () => {
